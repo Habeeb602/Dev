@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>DemoApp</display-name>
+  
+  <servlet>
+	  <servlet-name>add-two-numbers</servlet-name>
+	  <servlet-class>com.servlet.AddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	  <servlet-name>add-two-numbers</servlet-name>
+	  <url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	  <servlet-name>square-of-a-number</servlet-name>
+	  <servlet-class>com.servlet.SquareServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	  <servlet-name>square-of-a-number</servlet-name>
+	  <url-pattern>/square</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	  <servlet-name>context-servlet</servlet-name>
+	  <servlet-class>com.servlet.config.ContextServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	  <servlet-name>context-servlet</servlet-name>
+	  <url-pattern>/context</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+	  <servlet-name>config-servlet</servlet-name>
+	  <servlet-class>com.servlet.config.ConfigServlet</servlet-class>
+	  <init-param>
+		  <param-name>lang</param-name>
+		  <param-value>Java</param-value>
+	  </init-param>
+	  
+  </servlet>
+  <servlet-mapping>
+	  <servlet-name>config-servlet</servlet-name>
+	  <url-pattern>/config</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <!-- Storing some values here and retrieving that in a servlet -->
+  
+  <context-param>
+	  <param-name>name</param-name>
+	  <param-value>Habeeb</param-value>
+  </context-param>
+  
+  <context-param>
+	  <param-name>age</param-name>
+	  <param-value>23</param-value>
+  </context-param>
+  
+  
+</web-app>

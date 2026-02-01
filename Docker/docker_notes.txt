@@ -1,0 +1,131 @@
+
+# gives docker version
+docker -version
+
+
+
+# builds docker image 
+# . (dot) specifies the current directory where the Dockerfile resides
+docker build . -t habeeb602/accounts:v1
+
+
+# lists the docker images present in docker
+docker images
+
+
+# inspect the selected image
+# image_id can be taken from the 'docker images' command
+docker inspect image [image_id]
+
+
+# to run a docker container from an image
+# we need to expose the port since docker runs in an isolated loosely coupled environment
+# [port which docker should expose the container] : [port it should run our micro-service inside the docker] 
+docker run -p 8080:8080 habeeb602/accounts:v1 
+
+
+# use -d to run in detached mode
+docker run -d -p 8080:8080 habeeb602/accounts:v1 
+
+
+# to get a list of running containers
+docker ps
+
+# to get a list of all containers
+docker ps -a
+
+
+# to run an existing container
+# [container_id] can be found from 'docker ps -a' command
+docker start [container_id]
+
+
+
+# to stop a running container
+# [container_id] can be found from 'docker ps' command
+docker stop [container_id]
+
+
+# below is how a Dockerfile looks like
+# Dockerfile starts
+FROM openjdk:17-jdk-slim
+MAINTAINER jhabeeb602@gmail.com
+COPY target/accounts-0.0.1-SNAPSHOT.jar accounts-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java", "-jar", "accounts-0.0.1-SNAPSHOT.jar"]
+# Dockerfile ends
+
+
+
+
+
+# building image using google jib
+mvn compile jib:dockerBuild
+
+
+
+# command to push docker image to docker hub
+docker image push docker.io/habeeb602/accounts:v1
+
+
+# command to pull docker image from docker hub
+docker pull habeeb602/accounts:v1
+
+
+# docker-compose.yml file
+
+services:
+  accounts:
+    image: "habeeb602/accounts:v1"
+    container_name: "accounts_ms"
+    ports:
+      - 8080:8080
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - bank_ms
+
+
+  loans:
+    image: "habeeb602/loans:v1"
+    container_name: "loans_ms"
+    ports:
+      - 8090:8090
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - bank_ms
+
+  cards:
+    image: "habeeb602/cards:v1"
+    container_name: "cards_ms"
+    ports:
+      - 9000:9000
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - bank_ms
+
+networks:
+  bank_ms:
+    driver: "bridge"
+
+
+# command to run docker-compose file in detached mode
+docker-compose up -d
+
+# command to stop and delete all the containers created through docker-compose
+docker-compose down
+
+
+
+
+# Docker commands to run mysql containers
+docker run -p 3307:3306 --name accountsdb -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=accountsdb -d mysql
+docker run -p 3308:3306 --name loansdb -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=loansdb -d mysql
+docker run -p 3309:3306 --name cardsdb -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=cardsdb -d mysql

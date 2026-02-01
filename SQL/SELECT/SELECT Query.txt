@@ -1,0 +1,69 @@
+SELECT TABLE_NAME FROM ALL_TABLES WHERE TABLE_NAME LIKE '%JOB%';
+
+SELECT * FROM HR.EMPLOYEES;
+
+SELECT * FROM DUAL;
+
+SELECT SYSDATE FROM DUAL;
+
+select 
+    EMPLOYEE_ID,
+    "FIRST_NAME",
+    "LAST_NAME",
+    "EMAIL",
+    "PHONE_NUMBER",
+    "HIRE_DATE",
+    "JOB_ID",
+    "SALARY",
+    "COMMISSION_PCT",
+    "MANAGER_ID",
+    "DEPARTMENT_ID"
+from HR.EMPLOYEES;
+
+
+
+-- FETCH ANNUAL SALARY, ALONG WITH SALARY
+-- We can use "" to give aliases with spaces
+SELECT
+	EMPLOYEE_ID,
+	FIRST_NAME||' '||LAST_NAME AS EMPLOYEE_NAME,
+	JOB_ID,
+	SALARY,
+    SALARY * 12 AS "Annual Salary",
+	(CASE WHEN COMMISSION_PCT IS NULL THEN 0 ELSE COMMISSION_PCT END * SALARY) + (SALARY * 12) AS "Annual Salary with Commission",
+    COMMISSION_PCT
+FROM
+	HR.EMPLOYEES
+
+
+-- Quote Operator - useful when we want to use quotes in strings
+-- q'[]'
+-- we doesn't necessarily have to use [] brackets
+-- we can use q'??', q'!!' as well
+
+-- SELECT 
+-- 	LAST_NAME|| q'[ isn't a ]' || JOB_ID AS DESCRIPTION
+-- FROM 
+-- 	HR.EMPLOYEES
+
+
+-- DISTINCT Keyword
+SELECT DISTINCT DEPARTMENT_ID FROM HR.EMPLOYEES;
+
+-- DESCRIBE Keyword
+DESCRIBE HR.EMPLOYEES;
+DESC HR.EMPLOYEES;
+
+
+
+-- TASK #1
+SELECT EMPLOYEE_ID, LAST_NAME, SALARY * 12 "ANNUAL SALARY" FROM HR.EMPLOYEES; 
+
+-- TASK #2
+DESC HR.DEPARTMENTS;
+
+
+
+
+
+

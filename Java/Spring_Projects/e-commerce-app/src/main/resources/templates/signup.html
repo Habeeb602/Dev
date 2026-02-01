@@ -1,0 +1,40 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>
+            Sign-up
+        </title>
+    </head>
+
+    <body>
+
+        <h3>Sign Up</h3>
+        <div>
+            <form th:action="@{/user}" method="post" name="signup-form" th:object="${user}">
+                <input type="text" th:field="*{username}" name="username" placeholder="User Name"/>
+                <br>
+                <input type="email" th:field="*{email}" name="email" placeholder="E-mail"/>
+                <br>
+                <input type="password" th:field="*{password}" name="password" placeholder="Password" />
+                <br>
+                <input type="password" name="confirmPassword" placeholder="Confirm Password" />
+                <br>
+                <input type="submit" value="Sign up" onsubmit="return validate()">
+            </form>
+        </div>
+
+    <script>
+        function validate(){
+            let password = document.forms["signup-form"]["password"];
+            let confirmPassword = document.forms["signup-form"]["confirmPassword"];
+            if(password !== confirmPassword){
+                alert("Password & Confirm Password should match!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,18 @@
+package com.se2.prep;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.*;
+
+public class Test {
+    public static void main(String[] args) throws IOException{
+        Path path = Paths.get("C:\\Habeeb\\Dev\\Java\\SE2\\com\\se2\\prep\\temp.txt");
+        long size1 = Files.size(path);
+
+        File file = new File("C:\\Habeeb\\Dev\\Java\\SE2\\com\\se2\\prep\\temp.txt");
+        long size2 = file.length();
+        System.out.println("size1 = " + size1);
+        System.out.println("size2 = " + size2);
+        System.out.println(size1 == size2);
+    }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/SE2.iml" filepath="$PROJECT_DIR$/.idea/SE2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com/se2/collection/collection.iml" filepath="$PROJECT_DIR$/com/se2/collection/collection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com/se2/jdbc/jdbc.iml" filepath="$PROJECT_DIR$/com/se2/jdbc/jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com/se2/lambda/lambda.iml" filepath="$PROJECT_DIR$/com/se2/lambda/lambda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com/se2/stream/stream.iml" filepath="$PROJECT_DIR$/com/se2/stream/stream.iml" />
+    </modules>
+  </component>
+</project>

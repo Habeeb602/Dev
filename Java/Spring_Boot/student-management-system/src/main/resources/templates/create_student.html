@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Create Student</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	
+		 <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Student Management System</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a th:href="@{/students}">Student</a></li>
+      
+    </ul>
+  </div>
+</nav>
+	<div class="container">
+		<div class="row ml-10">
+				<div class="col-lg-6 col-md-6 col-sm-6 container card justify-content-center">
+					<h1 class="text-center">Create New Student</h1>
+					<div class="card-body">	
+						<form th:action="@{/students}" method="POST" th:object="${student}">
+							<div class="form-group">
+								<label>Student First Name</label>
+								<input 
+									name="firstName" 
+									th:field="*{firstName}"
+									placeholder="Enter First Name"
+									class="form-control"
+									type="text"
+									required
+									/>
+							</div>
+							
+							<div class="form-group">
+								<label>Student Last Name</label>
+								<input 
+									name="lastName" 
+									th:field="*{lastName}"
+									placeholder="Enter Last Name"
+									class="form-control"
+									type="text"
+									/>
+							</div>
+							
+							<div class="form-group">
+								<label>Student e-mail</label>
+								<input 
+									name="email" 
+									th:field="*{email}"
+									placeholder="Enter e-mail"
+									class="form-control"
+									type="email"
+									/>
+							</div>
+							<div class="box-footer">
+								<button class="btn btn-primary" type="submit">
+									Submit
+								</button>
+								<button class="btn btn-secondary" type="cancel" id="cancel">
+									Cancel
+								</button>
+							</div>
+						</form>
+					</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		var cancelBtn = document.querySelector("#cancel");
+		cancelBtn.addEventListener()
+	</script>
+</body>
+</html>

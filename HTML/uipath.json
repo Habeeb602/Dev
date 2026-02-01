@@ -1,0 +1,300 @@
+{
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "111112",
+      "DWLControl": {
+        "requesterName": "COM_CREATE",
+        "requesterLanguage": "100",
+        "externalCorrelationId": "109711:79336:df9508d4-bc6f-4a2d-996f-b0da3710cfa3"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "maintainCustomerAccount",
+      "TCRMTxObject": "PersonContractWrapperBObj",
+      "TCRMObject": {
+        "PersonContractWrapperBObj": {
+          "TCRMContractBObj": [
+            {
+              "LineOfBusiness": "TV",
+              "BrandName": "BELL",
+              "TCRMContractComponentBObj": [
+                {
+                  "ContractComponentValue": "Base Service",
+                  "TCRMContractPartyRoleBObj": {
+                    "RoleValue": "Bill Payee",
+                    "TCRMPersonBObj": {
+                      "TCRMPartyAddressBObj": {
+                        "AddressUsageValue": "Billing Location",
+                        "TCRMAddressBObj": {
+                          "ResidenceValue": "Apartment",
+                          "City": "Kochi",
+                          "ZipPostalCode": "1122334",
+                          "ResidenceNumber": "6547",
+                          "ProvinceStateValue": "ON",
+                          "CountryValue": "Canada",
+                          "StreetNumber": "20",
+                          "StreetName": "Diamond Valley",
+                          "StreetSuffix": "PL",
+                          "PostDirectional": "EAST",
+                          "BoxId": "4321"
+                        }
+                      }
+                    }
+                  },
+                  "TCRMAdminNativeKeyBObj": {
+                    "AdminContractId": "##BANTV##",
+                    "AdminFieldNameValue": "BAN"
+                  }
+                },
+                {
+                  "ContractComponentValue": "Supplemental Service",
+                  "ViaticalIndicator": "Y",
+                  "TCRMContractPartyRoleBObj": {
+                    "RoleValue": "Bill Payee"
+                  },
+                  "TCRMContractComponentValueBObj": [
+                    {
+                      "DomainValueValue": "SOURCE_SYSTEM_NAME",
+                      "Value": "NM1"
+                    }
+                  ],
+                  "TCRMAdminNativeKeyBObj": {
+                    "AdminContractId": "##TVBANTV##",
+                    "AdminFieldNameValue": "TV Subscription Number"
+                  }
+                }
+              ]
+            },
+            {
+              "LineOfBusiness": "INTERNET",
+              "BrandName": "BELL",
+              "TCRMContractComponentBObj": [
+                {
+                  "ContractComponentValue": "Base Service",
+                  "TCRMContractPartyRoleBObj": {
+                    "RoleValue": "Bill Payee",
+                    "TCRMPersonBObj": {
+                      "TCRMPartyAddressBObj": {
+                        "AddressUsageValue": "Billing Location",
+                        "TCRMAddressBObj": {
+                          "ResidenceValue": "Apartment",
+                          "City": "Kochi",
+                          "ZipPostalCode": "1122334",
+                          "ResidenceNumber": "6547",
+                          "ProvinceStateValue": "ON",
+                          "CountryValue": "Canada",
+                          "StreetNumber": "20",
+                          "StreetName": "Diamond Valley",
+                          "StreetSuffix": "PL",
+                          "PostDirectional": "EAST",
+                          "BoxId": "4321"
+                        }
+                      }
+                    }
+                  },
+                  "TCRMAdminNativeKeyBObj": {
+                    "AdminContractId": "##BANInternet##",
+                    "AdminFieldNameValue": "BAN"
+                  }
+                },
+                {
+                  "ContractComponentValue": "Supplemental Service",
+                  "ViaticalIndicator": "Y",
+                  "TCRMContractPartyRoleBObj": {
+                    "RoleValue": "Bill Payee"
+                  },
+                  "TCRMContractComponentValueBObj": [
+                    {
+                      "DomainValueValue": "SOURCE_SYSTEM_NAME",
+                      "Value": "NM1"
+                    }
+                  ],
+                  "TCRMAdminNativeKeyBObj": {
+                    "AdminContractId": "##B1number##",
+                    "AdminFieldNameValue": "Internet User Id"
+                  }
+                }
+              ]
+            },
+            {
+              "LineOfBusiness": "MOBILITY",
+              "BrandName": "BELL",
+              "TCRMContractComponentBObj": [
+                {
+                  "ContractComponentValue": "Base Service",
+                  "TCRMContractPartyRoleBObj": {
+                    "RoleValue": "Bill Payee",
+                    "TCRMPersonBObj": {
+                      "TCRMPartyAddressBObj": {
+                        "AddressUsageValue": "Billing Location",
+                        "TCRMAddressBObj": {
+                          "ResidenceValue": "Apartment",
+                          "City": "Kochi",
+                          "ZipPostalCode": "1122334",
+                          "ResidenceNumber": "6547",
+                          "ProvinceStateValue": "ON",
+                          "CountryValue": "Canada",
+                          "StreetNumber": "20",
+                          "StreetName": "Diamond Valley",
+                          "StreetSuffix": "PL",
+                          "PostDirectional": "EAST",
+                          "BoxId": "4321"
+                        }
+                      }
+                    }
+                  },
+                  "TCRMAdminNativeKeyBObj": {
+                    "AdminContractId": " ",
+                    "AdminFieldNameValue": "BAN"
+                  }
+                },
+                {
+                  "ContractComponentValue": "Supplemental Service",
+                  "ViaticalIndicator": "Y",
+                  "TCRMContractPartyRoleBObj": {
+                    "RoleValue": "Bill Payee"
+                  },
+                  "TCRMContractComponentValueBObj": [
+                    {
+                      "DomainValueValue": "SOURCE_SYSTEM_NAME",
+                      "Value": "NM1"
+                    }
+                  ],
+                  "TCRMAdminNativeKeyBObj": {
+                    "AdminContractId": " ",
+                    "AdminFieldNameValue": "CTN"
+                  }
+                }
+              ]
+            },
+            {
+              "LineOfBusiness": "WIRELINE",
+              "BrandName": "BELL",
+              "TCRMContractComponentBObj": [
+                {
+                  "ContractComponentValue": "Base Service",
+                  "TCRMContractPartyRoleBObj": {
+                    "RoleValue": "Bill Payee",
+                    "TCRMPersonBObj": {
+                      "TCRMPartyAddressBObj": {
+                        "AddressUsageValue": "Billing Location",
+                        "TCRMAddressBObj": {
+                          "ResidenceValue": "Apartment",
+                          "City": "Kochi",
+                          "ZipPostalCode": "1122334",
+                          "ResidenceNumber": "6547",
+                          "ProvinceStateValue": "ON",
+                          "CountryValue": "Canada",
+                          "StreetNumber": "20",
+                          "StreetName": "Diamond Valley",
+                          "StreetSuffix": "PL",
+                          "PostDirectional": "EAST",
+                          "BoxId": "4321"
+                        }
+                      }
+                    }
+                  },
+                  "TCRMAdminNativeKeyBObj": {
+                    "AdminContractId": "##BANwet##",
+                    "AdminFieldNameValue": "BAN"
+                  }
+                },
+                {
+                  "ContractComponentValue": "Supplemental Service",
+                  "ViaticalIndicator": "Y",
+                  "TCRMContractPartyRoleBObj": {
+                    "RoleValue": "Bill Payee"
+                  },
+                  "TCRMContractComponentValueBObj": [
+                    {
+                      "DomainValueValue": "SOURCE_SYSTEM_NAME",
+                      "Value": "NM1"
+                    }
+                  ],
+                  "TCRMAdminNativeKeyBObj": {
+                    "AdminContractId": "##TNwet##",
+                    "AdminFieldNameValue": "WTN"
+                  }
+                }
+              ]
+            }
+          ],
+          "PersonWrapperBObj": {
+            "TCRMPersonBObj": {
+              "TCRMPartyAddressBObj": [
+                {
+                  "AddressUsageValue": "Billing Location",
+                  "TCRMAddressBObj": {
+                    "ResidenceValue": "Apartment",
+                    "City": "Kochi",
+                    "ZipPostalCode": "1122334",
+                    "ResidenceNumber": "6547",
+                    "ProvinceStateValue": "ON",
+                    "CountryValue": "Canada",
+                    "StreetNumber": "20",
+                    "StreetName": "Diamond Valley",
+                    "StreetSuffix": "PL",
+                    "PostDirectional": "EAST",
+                    "BoxId": "4321"
+                  }
+                }
+              ],
+              "TCRMPartyContactMethodBObj": [
+                {
+                  "ContactMethodUsageValue": "Contact TN",
+                  "TCRMContactMethodBObj": {
+                    "ReferenceNumber": "##TN##",
+                    "ContactMethodValue": "Telephone Number"
+                  }
+                },
+                {
+                  "ContactMethodUsageValue": "Evening Contact TN",
+                  "TCRMContactMethodBObj": {
+                    "ReferenceNumber": "##TN##",
+                    "ContactMethodValue": "Telephone Number"
+                  }
+                },
+                {
+                  "ContactMethodUsageValue": "SMS TN",
+                  "TCRMContactMethodBObj": {
+                    "ReferenceNumber": "##TN##",
+                    "ContactMethodValue": "Telephone Number"
+                  }
+                },
+                {
+                  "ContactMethodUsageValue": "Confirmation Email Address",
+                  "TCRMContactMethodBObj": {
+                    "ReferenceNumber": "abc@abc.com",
+                    "ContactMethodValue": "Email Address"
+                  }
+                },
+                {
+                  "ContactMethodUsageValue": "Contact Email Address",
+                  "TCRMContactMethodBObj": {
+                    "ReferenceNumber": "ccs@cds.com",
+                    "ContactMethodValue": "Email Address"
+                  }
+                }
+              ],
+              "TCRMPersonNameBObj": [
+                {
+                  "NameUsageValue": "NM1al",
+                  "GivenNameOne": "Sharlot",
+                  "GivenNameTwo": "",
+                  "LastName": "Singh"
+                },
+                {
+                  "NameUsageValue": "Account Holder",
+                  "GivenNameOne": "Sharlot",
+                  "GivenNameTwo": "",
+                  "LastName": "Singh"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
