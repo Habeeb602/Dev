@@ -1,0 +1,28 @@
+package com.example.reactive.section_3.client;
+
+import com.example.reactive.common.AbstractHttpClient;
+import reactor.core.publisher.Flux;
+
+public class ExternalHttpClient extends AbstractHttpClient {
+
+
+    public Flux<String> getNames(){
+        return this
+                .httpClient
+                .get()
+                .uri("/demo02/name/stream")
+                .responseContent()
+                .asString();
+    }
+
+
+    public Flux<Integer> getStockPrice(){
+        return this
+                .httpClient
+                .get()
+                .uri("/demo02/stock/stream")
+                .responseContent()
+                .asString()
+                .map(Integer::parseInt);
+    }
+}
